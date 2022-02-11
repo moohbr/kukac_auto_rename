@@ -7,4 +7,6 @@ fi
 
 git clone https://github.com/moohbr/kukac_auto_rename.git
 
+pip install -r requirements.txt
+
 printf "Done!\n"
