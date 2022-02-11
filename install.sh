@@ -5,6 +5,6 @@ if [ $(id -u) -ne 0 ]; then
 	exit 1
 fi
 
-git clone github
+git clone https://github.com/moohbr/kukac_auto_rename.git
 
 printf "Done!\n"
