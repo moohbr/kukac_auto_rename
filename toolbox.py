@@ -23,8 +23,7 @@ def get_folders(folder):
 
 
 def rename_folders(path, sub_path):
-    for i in tqdm(range(100), desc="Importing...", ascii=False, ncols=75):
-        files = os.listdir(path)
-        for index, file in enumerate(files):
-            os.rename(os.path.join(path, file), os.path.join(path, f'{sub_path}'
-                                                             .join([f'aula{str(index)}-', '.txt'])))
+    files = os.listdir(path)
+    for index, file in enumerate(files):
+        os.rename(os.path.join(path, file), os.path.join(path, f'{sub_path}'
+                                                         .join([f'aula{str(index)}-', '.txt'])))
