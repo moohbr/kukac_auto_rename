@@ -6,3 +6,4 @@ sub_path = get_folders(root_path)
 path = f'{root_path}/{sub_path}'
 
 rename_folders(path, sub_path)
+print("Done!")
