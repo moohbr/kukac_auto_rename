@@ -1,5 +1,4 @@
 import os
-from tqdm import tqdm
 
 
 def get_folders(folder):
@@ -25,5 +24,6 @@ def get_folders(folder):
 def rename_folders(path, sub_path):
     files = os.listdir(path)
     for index, file in enumerate(files):
+        print(index)
         os.rename(os.path.join(path, file), os.path.join(path, f'{sub_path}'
-                                                         .join([f'aula{str(index)}-', '.txt'])))
+                                                         .join([f'aula{str(index)}-', '.mp4'])))
