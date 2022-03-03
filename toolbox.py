@@ -23,7 +23,7 @@ def get_folders(folder):
 
 def rename_folders(path, sub_path):
     files = os.listdir(path)
-    type_file = input(f'Type the files format: Example: txt')
+    type_file = input(f'Type the files format, like [txt, mp4, jpeg] :')
     for index, file in enumerate(files):
         os.rename(os.path.join(path, file), os.path.join(path, f'{sub_path}'
                                                          .join([f'aula{str(int(index + 1))}-', f'.{type_file}'])))
