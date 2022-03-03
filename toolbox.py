@@ -1,5 +1,9 @@
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+DEBUG = os.getenv('DEBUG')
 
 def get_folders(folder):
     sub_folders = [name for name in os.listdir(folder) if os.path.isdir(os.path.join(folder, name))]
@@ -23,7 +27,10 @@ def get_folders(folder):
 
 def rename_folders(path, sub_path):
     files = os.listdir(path)
-    type_file = input(f'Type the files format, like [txt, mp4, jpeg] :')
+    type_file = input(f'Type the files format, like [txt, mp4, jpeg] : ')
+    if DEBUG is True:
+        for file in files:
+            print(f'File {file}')
     for index, file in enumerate(files):
         os.rename(os.path.join(path, file), os.path.join(path, f'{sub_path}'
                                                          .join([f'aula{str(int(index + 1))}-', f'.{type_file}'])))
